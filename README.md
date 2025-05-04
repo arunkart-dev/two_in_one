@@ -1,6 +1,7 @@
 # two_in_one
 
-A new Flutter project.
+This is my first half of flutter learning ,
+making basic applications to make more in future
 
 ## Getting Started
 
