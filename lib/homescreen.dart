@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:two_in_one/counter.dart';
 import 'package:two_in_one/currencyconvert.dart';
+import 'package:two_in_one/notes.dart';
 import 'package:two_in_one/taskmanager.dart';
 import 'package:two_in_one/tictactoe.dart';
 
@@ -99,6 +100,25 @@ class _HomescreenState extends State<Homescreen> {
                   ),
                   child: Text(
                     'Currency Converter',
+                    style: TextStyle(fontSize: 25, color: Colors.white),
+                  ),
+                ),
+              ),
+            ),
+            InkWell(
+              onTap: () {
+                Navigator.push(context, MaterialPageRoute(builder: (context)=>Notes()));
+              },
+              child: Card(
+                color: Colors.lightBlue,
+                elevation: 6.0,
+                child: Padding(
+                  padding: const EdgeInsets.symmetric(
+                    horizontal: 90,
+                    vertical: 30,
+                  ),
+                  child: Text(
+                    'Notes App',
                     style: TextStyle(fontSize: 25, color: Colors.white),
                   ),
                 ),

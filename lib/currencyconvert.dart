@@ -80,7 +80,7 @@ class _CurrencyconvertState extends State<Currencyconvert> {
                         borderRadius: BorderRadius.circular(10),
                       ),
                       child: Image.network(
-                        'https://upload.wikimedia.org/wikipedia/commons/2/23/US_one_dollar_bill%2C_obverse%2C_series_2009.jpg',
+                        'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSmpuQZ-b8LyO0mTIpxL7zX0iMtZJzsHGdBUw&s',
                         fit: BoxFit.cover,
                       ),
                     ),
