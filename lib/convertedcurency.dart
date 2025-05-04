@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 
 class Convertedcurency extends StatefulWidget {
@@ -10,12 +9,20 @@ class Convertedcurency extends StatefulWidget {
 
 class _ConvertedcurencyState extends State<Convertedcurency> {
   final TextEditingController _currencycontroller = TextEditingController();
-  String ?res;
+  String? res;
   void convert() {
     double a = double.parse(_currencycontroller.text);
     double b = 85;
     setState(() {
       res = (a * b).toStringAsFixed(2);
+    });
+  }
+
+  void euro() {
+    double d = double.parse(_currencycontroller.text);
+    double c = 95.76;
+    setState(() {
+      res = (d * c).toStringAsFixed(2);
     });
   }
 
@@ -39,8 +46,8 @@ class _ConvertedcurencyState extends State<Convertedcurency> {
                 controller: _currencycontroller,
                 decoration: InputDecoration(
                   prefixIcon: Icon(Icons.money),
-                  label: Text('Indian ruppees'),
-                  hintText: 'Enter ruppees',
+                  label: Text('Dollars'),
+                  hintText: 'Enter dollars',
                   border: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(10.0),
                   ),
@@ -56,17 +63,32 @@ class _ConvertedcurencyState extends State<Convertedcurency> {
                   minimumSize: Size(300, 40),
                   textStyle: TextStyle(fontSize: 16),
                 ),
-                child: Text('Convert to dollars'),
+                child: Text('Convert dollar to ruppees'),
               ),
-              if(res != null)
-              Card(
-                color: Colors.white,
-                elevation: 4.0,
-                child: Padding(
-                  padding: const EdgeInsets.all(15.0),
-                  child: Text('${res!}  In dollars',style: TextStyle(fontSize: 25,color: Colors.red),),
-                )
-                )
+               ElevatedButton(
+                onPressed: () {
+                  euro();
+                },
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: Colors.blue,
+                  foregroundColor: Colors.white,
+                  minimumSize: Size(300, 40),
+                  textStyle: TextStyle(fontSize: 16),
+                ),
+                child: Text('Convert euro to ruppees'),
+              ),
+              if (res != null)
+                Card(
+                  color: Colors.white,
+                  elevation: 4.0,
+                  child: Padding(
+                    padding: const EdgeInsets.all(15.0),
+                    child: Text(
+                      '${res!}  In ruppees',
+                      style: TextStyle(fontSize: 25, color: Colors.red),
+                    ),
+                  ),
+                ),
             ],
           ),
         ),
