@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:two_in_one/counter.dart';
 import 'package:two_in_one/currencyconvert.dart';
 import 'package:two_in_one/notes.dart';
+import 'package:two_in_one/stopwatch.dart';
 import 'package:two_in_one/taskmanager.dart';
 import 'package:two_in_one/tictactoe.dart';
 
@@ -88,7 +89,10 @@ class _HomescreenState extends State<Homescreen> {
             ),
             InkWell(
               onTap: () {
-                Navigator.push(context, MaterialPageRoute(builder: (context)=>Currencyconvert()));
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => Currencyconvert()),
+                );
               },
               child: Card(
                 color: Colors.lightBlue,
@@ -107,7 +111,10 @@ class _HomescreenState extends State<Homescreen> {
             ),
             InkWell(
               onTap: () {
-                Navigator.push(context, MaterialPageRoute(builder: (context)=>Notes()));
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => Notes()),
+                );
               },
               child: Card(
                 color: Colors.lightBlue,
@@ -119,6 +126,21 @@ class _HomescreenState extends State<Homescreen> {
                   ),
                   child: Text(
                     'Notes App',
+                    style: TextStyle(fontSize: 25, color: Colors.white),
+                  ),
+                ),
+              ),
+            ),
+            InkWell(
+              onTap: () {
+                Navigator.push(context, MaterialPageRoute(builder: (context)=>StWatch()));
+              },
+              child: Card(
+                color: Colors.lightBlue,
+                child: Padding(
+                  padding: EdgeInsets.symmetric(horizontal: 90, vertical: 30),
+                  child: Text(
+                    'Stopwatch',
                     style: TextStyle(fontSize: 25, color: Colors.white),
                   ),
                 ),
